@@ -1,10 +1,11 @@
 def conversion_to_binary(number):              # переведення в двійкове
-    remainder = int(number) % 2                # остача
-    integer = int(number) // 2                 # ціла частина
+    NUMBER = 2
+    remainder = int(number) % NUMBER                # остача
+    integer = int(number) // NUMBER                 # ціла частина
     x = [remainder]
     while integer != 0:
-        remainder = integer % 2
-        integer //= 2
+        remainder = integer % NUMBER
+        integer //= NUMBER
         x.insert(0, remainder)                   # зберігти елемнт на початку списка
     print(f'This is 0b{"".join(map(str, x))}')  # об'єдную усі елементи як стрінг в списку і прінчу
 
